@@ -1,0 +1,26 @@
+Emacs*toolBar: 0
+Emacs*scrollBar: 0
+Emacs*menuBar: 0
+
+URxvt*transparent: false
+
+URxvt*shading: 50
+
+URxvt*saveLines: 12000
+
+#if defined _16
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=16:antialias=true:hinting=true
+#else
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=22:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=22:antialias=true:hinting=true
+#endif
+
+URxvt*scrollBar: false
+
+URxvt*scrollBar_right: false
+
+URxvt*scrollstyle: rxvt
+
+#include "/home/marelli/.config/base16-xresources/base16-marrakesh.light.xresources"
+
