@@ -21,6 +21,7 @@ URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 
 URxvt*scrollstyle: rxvt
+URxvt*iso14755: False
 
 #include "/home/marelli/.config/base16-xresources/base16-marrakesh.light.xresources"
 
