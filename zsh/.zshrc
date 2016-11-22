@@ -64,7 +64,7 @@ function precmd() {
 }
 
 # Base16 Shell
-BASE16_SHELL="/home/marelli/.config/base16-shell/base16-marrakesh.light.sh"
+BASE16_SHELL="/home/marelli/.config/base16-shell/scripts/base16-mocha.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # User configuration
@@ -96,3 +96,7 @@ BASE16_SHELL="/home/marelli/.config/base16-shell/base16-marrakesh.light.sh"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lftp-svn="lftp -u F56118B http://itven1mantis1.mmemea.marelliad.net/dream2/DREAM2/Branches/"
+alias marellipt="sudo marelli-proxy apt-get"
+alias lock="cmatrix; slock"
+alias screencast="avconv -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0+0,0 "

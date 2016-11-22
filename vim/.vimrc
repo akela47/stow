@@ -12,6 +12,9 @@ filetype plugin indent on
 " Turn on that syntax highlighting
 syntax on
 
+colorscheme base16-mocha
+let base16colorspace=256
+
 "set noexpandtab
 set shiftwidth=4
 set tabstop=4
@@ -38,6 +41,7 @@ set ruler
 
 " Display the line numbers.
 set number
+"set cursorline
 
 " Activate syntax highlighting.
 syntax enable
@@ -64,4 +68,6 @@ let Tlist_Display_Prototype = 1 "display full prototype instead of just function
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F5> :TlistToggle<CR>
 nnoremap <F6> :TlistShowPrototype<CR>
+" TagHighlight
+nnoremap <F8> :UpdateTypesFile<CR>
 

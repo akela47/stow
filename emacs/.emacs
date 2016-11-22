@@ -1,7 +1,7 @@
 					;General
-;(menu-bar-mode -1)
+(menu-bar-mode -1)
 (toggle-scroll-bar -1)
-;(tool-bar-mode -1) 
+(tool-bar-mode -1) 
 (setq-default inhibit-startup-screen t)
 (setq make-backup-files nil)
 (setq-default column-number-mode t)
@@ -12,6 +12,8 @@
 (require 'dired-x)
 
 (setenv "http_proxy" "http://10.12.54.15:8080")
+(setenv "https_proxy" "https://10.12.54.15:8080")
+
 (set-face-attribute 'default nil :height 160)
 					;Org
 (require 'org)
@@ -26,10 +28,10 @@
 (require 'package)
 (add-to-list 'package-archives
 ;	     '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
-	     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives
 ;	     '("melpa" . "http://melpa.milkbox.net/packages/"))
-	     '("melpa" . "http://melpa.org/packages/"))
+	     '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
@@ -115,23 +117,19 @@
 
 					;Automatic
 
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (base16-marrakesh-light)))
- '(custom-safe-themes (quote ("bbd51dc8bc53d40beadc267c490ffed3d62a4e10293512cc634ee97f77c1fc82" "61724add6ddc09a0426f6b39109a76dd83174cf36d76563d3a35c7e07c0753c6" default)))
- '(custom-theme-load-path (quote (custom-theme-directory t ".config/base16-emacs/")))
- '(delete-selection-mode t)
- '(org-replace-disputed-keys nil)
- '(recentf-mode t)
- '(shift-select-mode nil))
+ '(custom-enabled-themes nil)
+ '(custom-safe-themes (quote ("3f546f127564de59f1c42dfd65d32bd7650fa5a614cd58c2df061da052ea3ec0" default)))
+ '(custom-theme-load-path (quote ("/home/marelli/.config/base16-emacs/" custom-theme-directory t))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
