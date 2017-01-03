@@ -45,7 +45,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(svn-fast-info git sudo)
+plugins=(sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,8 +64,13 @@ function precmd() {
 }
 
 # Base16 Shell
-BASE16_SHELL="/home/marelli/.config/base16-shell/base16-marrakesh.light.sh"
+BASE16_SHELL="/home/marelli/.config/base16-shell/scripts/base16-mocha.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# Dynamic Colors 
+# https://github.com/sos4nt/dynamic-colors
+export PATH="$HOME/bin:$HOME/.dynamic-colors/bin:$PATH"
+source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 
 # User configuration
 
@@ -96,3 +101,4 @@ BASE16_SHELL="/home/marelli/.config/base16-shell/base16-marrakesh.light.sh"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
