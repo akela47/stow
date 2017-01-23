@@ -42,11 +42,7 @@ set ruler
 
 " Display the line numbers.
 set number
-<<<<<<< HEAD
-"set cursorline
-=======
 set cursorline
->>>>>>> f53f1ace4736b6df4356d1c64b8951c58998e202
 
 " Activate syntax highlighting.
 syntax enable

@@ -8,13 +8,8 @@ URxvt*shading: 50
 
 URxvt*saveLines: 12000
 
-<<<<<<< HEAD
 URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
 URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
-=======
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=17:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=17:antialias=true:hinting=true
->>>>>>> f53f1ace4736b6df4356d1c64b8951c58998e202
 
 URxvt*scrollBar: false
 
@@ -23,9 +18,4 @@ URxvt*scrollBar_right: false
 URxvt*scrollstyle: rxvt
 URxvt*iso14755: False
 
-<<<<<<< HEAD
 #include "/home/marelli/.config/base16-xresources/xresources/base16-mocha.Xresources"
-
-=======
-#include "/home/akela/.config/base16-xresources/xresources/base16-mocha.Xresources"
->>>>>>> f53f1ace4736b6df4356d1c64b8951c58998e202

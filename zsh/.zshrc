@@ -101,11 +101,8 @@ source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-<<<<<<< HEAD
 alias lftp-svn="lftp -u F56118B http://itven1mantis1.mmemea.marelliad.net/dream2/DREAM2/Branches/"
 alias marellipt="sudo marelli-proxy apt-get"
 alias lock="cmatrix; slock"
 alias screencast="avconv -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0+0,0 "
-=======
 
->>>>>>> f53f1ace4736b6df4356d1c64b8951c58998e202
