@@ -5,12 +5,13 @@
 (setq-default inhibit-startup-screen t)
 (setq make-backup-files nil)
 (setq-default column-number-mode t)
-(global-linum-mode t)
+;(global-linum-mode t)
 
 (savehist-mode 1)
 
 (require 'dired-x)
 
+<<<<<<< HEAD
 (setenv "http_proxy" "http://10.12.54.15:8080")
 (setenv "https_proxy" "https://10.12.54.15:8080")
 
@@ -22,6 +23,9 @@
 (setq org-log-done t)
 (setq org-agenda-files '("~/org/"))
 
+=======
+(set-face-attribute 'default nil :height 120)
+>>>>>>> f53f1ace4736b6df4356d1c64b8951c58998e202
 
 					;Packages
 
@@ -36,33 +40,6 @@
 (package-initialize)
 
 					;Autocomplete
-(add-hook 'after-init-hook 'global-company-mode)
-
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
-
-;; replace the `completion-at-point' and `complete-symbol' bindings in
-;; irony-mode's buffers by irony-mode's asynchronous function
-(defun my-irony-mode-hook ()
-  (define-key irony-mode-map [remap completion-at-point]
-    'irony-completion-at-point-async)
-  (define-key irony-mode-map [remap complete-symbol]
-    'irony-completion-at-point-async))
-(add-hook 'irony-mode-hook 'my-irony-mode-hook)
-
-
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'company-irony))
-
-;; (optional) adds CC special commands to `company-begin-commands' in order to
-;; trigger completion at interesting places, such as after scope operator
-;;     std::|
-;(add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
-					;Flycheck
-
-;(eval-after-load 'flycheck
-;  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
 					;Auctex
 ;(setq TeX-view-program-selection
@@ -77,45 +54,22 @@
 (setq TeX-electric-sub-and-superscript t)
 
 					;Macros
-(fset 'create-method
-   [?\C-a ?\C-k ?\C-y ?\C-x ?o ?\C-a ?\M-> return ?\C-y tab ?\C-a ?\M-f ?\C-f ?\C-x ?o ?\C-r ?c ?l ?a ?s ?s ?\M-f ?\C-f ?\C-  ?\M-f ?\M-w ?\C-x ?o ?\C-y ?: ?: ?\C-s ?\; ?\C-? ?\; ?\C-m backspace return ?\{ return ?\}])
+;; (fset 'create-method
+;;    [?\C-a ?\C-k ?\C-y ?\C-x ?o ?\C-a ?\M-> return ?\C-y tab ?\C-a ?\M-f ?\C-f ?\C-x ?o ?\C-r ?c ?l ?a ?s ?s ?\M-f ?\C-f ?\C-  ?\M-f ?\M-w ?\C-x ?o ?\C-y ?: ?: ?\C-s ?\; ?\C-? ?\; ?\C-m backspace return ?\{ return ?\}])
 
-(fset 'create-wrap-section
-   [?# ?i ?f ?d ?e ?f ?  ?H ?I ?G ?H ?W ?A ?Y return ?# ?e ?l ?s ?e return ?# ?e ?n ?d ?i ?f return])
+;; (fset 'create-wrap-section
+;;    [?# ?i ?f ?d ?e ?f ?  ?H ?I ?G ?H ?W ?A ?Y return ?# ?e ?l ?s ?e return ?# ?e ?n ?d ?i ?f return])
 
 ;(global-set-key (kbd "\C-cm") 'create-method)
 ;(global-set-key (kbd "\C-cc") 'create-wrap-section)
 
-
-					;Typing
-;(require 'ergoemacs-mode)
-;(setq ergoemacs-theme nil) 
-;(setq ergoemacs-keyboard-layout "programmer-dv") 
-;(ergoemacs-mode 1)
 
 (require 'iedit)
 					;Language independent
 (electric-indent-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
-					;c/c++
-(require 'google-c-style)
 
-
-(defun cc-hook ()
-  (google-set-c-style)
-  (setq c-default-style "google")
-  (setq c-basic-offset 4)
-  (c-set-offset 'label 0)
-  (ggtags-mode)
-  )
-(add-hook 'c-mode-hook 'cc-hook)
-(add-hook 'c++-mode-hook 'cc-hook)
-
-(global-set-key (kbd "C-<tab>") 'dabbrev-completion)
-(define-key minibuffer-local-map (kbd "C-<tab>") 'dabbrev-completion)
-
-					;Automatic
 
 
 
@@ -124,9 +78,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+<<<<<<< HEAD
  '(custom-enabled-themes nil)
  '(custom-safe-themes (quote ("3f546f127564de59f1c42dfd65d32bd7650fa5a614cd58c2df061da052ea3ec0" default)))
  '(custom-theme-load-path (quote ("/home/marelli/.config/base16-emacs/" custom-theme-directory t))))
+=======
+ '(browse-url-generic-program "google-chrome"))
+>>>>>>> f53f1ace4736b6df4356d1c64b8951c58998e202
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
