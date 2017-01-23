@@ -71,3 +71,4 @@ nnoremap <F6> :TlistShowPrototype<CR>
 " TagHighlight
 nnoremap <F8> :UpdateTypesFile<CR>
 
+
