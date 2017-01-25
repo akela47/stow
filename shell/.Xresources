@@ -18,4 +18,4 @@ URxvt*scrollBar_right: false
 URxvt*scrollstyle: rxvt
 URxvt*iso14755: False
 
-#include "/home/marelli/.config/base16-xresources/xresources/base16-mocha.Xresources"
+#include ".config/base16-xresources/xresources/base16-mocha.Xresources"

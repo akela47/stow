@@ -64,13 +64,13 @@ function precmd() {
 }
 
 # Base16 Shell
-BASE16_SHELL="/home/marelli/.config/base16-shell/scripts/base16-mocha.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-mocha.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Dynamic Colors 
 # https://github.com/sos4nt/dynamic-colors
-export PATH="$HOME/bin:$HOME/.dynamic-colors/bin:$PATH"
-source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
+# export PATH="$HOME/bin:$HOME/.dynamic-colors/bin:$PATH"
+# source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 
 # User configuration
 
@@ -106,3 +106,4 @@ alias marellipt="sudo marelli-proxy apt-get"
 alias lock="cmatrix; slock"
 alias screencast="avconv -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0+0,0 "
 
+export HISTSIZE=10000000
