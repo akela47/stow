@@ -4,12 +4,12 @@ Emacs*menuBar: 0
 
 URxvt*transparent: false
 
-URxvt*shading: 50
+URxvt*shading: 10
 
 URxvt*saveLines: 12000
 
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
+URxvt*font: xft:Hack:pixelsize=16
+URxvt*boldFont: xft:Hack:bold:pixelsize=16
 
 URxvt*scrollBar: false
 
@@ -17,5 +17,7 @@ URxvt*scrollBar_right: false
 
 URxvt*scrollstyle: rxvt
 URxvt*iso14755: False
+URxvt.perl-ext-common: selection-to-clipboard
 
-#include ".config/base16-xresources/xresources/base16-mocha.Xresources"
+//#include ".config/base16-xresources/xresources/base16-gruvbox-light-soft-256.Xresources"
+#include ".config/theme-wrapper/current.Xresources"

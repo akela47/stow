@@ -64,8 +64,12 @@ function precmd() {
 }
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-mocha.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL="$HOME/.config/theme-wrapper/shell"
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+# Ros environment
+ROS_SETUP="/opt/ros/kinetic/setup.zsh"
+[[ -s $ROS_SETUP ]] && source $ROS_SETUP
 
 # Dynamic Colors 
 # https://github.com/sos4nt/dynamic-colors
@@ -105,5 +109,15 @@ alias lftp-svn="lftp -u F56118B http://itven1mantis1.mmemea.marelliad.net/dream2
 alias marellipt="sudo marelli-proxy apt-get"
 alias lock="cmatrix; slock"
 alias screencast="avconv -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0+0,0 "
+alias fork="fork &> /dev/null"
+alias gitlog="git log --graph --all --decorate=full"
+alias start-gpg-agent="gpg-agent --daemon --write-env-file $HOME/.env"
+alias source-gpg-agent="source $HOME/.env"
+alias to-clipboard="xclip -selection clipboard -i"
+
+export repo_server="F09620C@itven1mantis1.mmemea.marelliad.net"
+export repo="ssh://F09620C@itven1mantis1.mmemea.marelliad.net:/san1/git/technology_innovation"
+
+alias repo-list="ssh $repo_server 'ls /san1/git/technology_innovation/'"
 
 export HISTSIZE=10000000

@@ -14,7 +14,7 @@
 (setenv "http_proxy" "http://10.12.54.15:8080")
 (setenv "https_proxy" "https://10.12.54.15:8080")
 
-(set-face-attribute 'default nil :height 160)
+;(set-face-attribute 'default nil :height 160)
 					;Org
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
@@ -64,21 +64,3 @@
 (electric-indent-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
-
-
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes nil)
- '(custom-safe-themes (quote ("3f546f127564de59f1c42dfd65d32bd7650fa5a614cd58c2df061da052ea3ec0" default)))
- '(custom-theme-load-path (quote ("/home/marelli/.config/base16-emacs/" custom-theme-directory t))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
